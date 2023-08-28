@@ -1,4 +1,4 @@
-package entities;
+package model.entities;
 
 public class Student {
     private String name;

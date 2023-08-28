@@ -1,4 +1,4 @@
-package entities;
+package model.entities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,10 +29,12 @@ public class Classroom {
 
     @Override
     public String toString(){
-        String result = "# CLASSROOM PERFORMANCE #" + "\n" + "\n";
-        for(int i = 0; i < students.size(); i++){
-            result += "===== Student " + (i + 1) + " =====" + "\n";
-            result += students.get(i) + "\n";
+        String result = "";
+        int idx = 1;
+        for (Student student : students) {
+            result += "===== Student " + idx + " =====" + "\n";
+            result += student + "\n";
+            idx++;
         }
         result += "Classroom average grade: " + String.format("%.1f", calculateAverage()) + "\n";
         return result;

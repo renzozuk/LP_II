@@ -1,8 +1,8 @@
 package application;
 
-import entities.Classroom;
-import entities.Exam;
-import entities.Student;
+import model.entities.Classroom;
+import model.entities.Exam;
+import model.entities.Student;
 
 import java.util.Locale;
 
