@@ -20,13 +20,12 @@ public class TelephoneDirectory {
 
     @Override
     public String toString(){
-        String result = "Operator: " + operator + "\n";
+        StringBuilder result = new StringBuilder("Operator: " + operator + "\n");
         for (PhoneNumber phoneNumber : phoneList.keySet()) {
-            result += "========================================" + "\n";
-            result += phoneList.get(phoneNumber);
-            result += "Phone number: " +  phoneNumber + "\n";
-            result += "Country: " + AreaCode.getCountryByDDI(phoneNumber) + "\n";
+            result.append("========================================").append("\n")
+                .append(phoneList.get(phoneNumber)).append("Phone number: ").append(phoneNumber).append("\n")
+                .append("Country: ").append(AreaCode.getCountryByDDI(phoneNumber)).append("\n");
         }
-        return result;
+        return result.toString();
     }
 }

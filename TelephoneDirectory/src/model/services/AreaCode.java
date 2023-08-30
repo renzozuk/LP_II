@@ -8,18 +8,18 @@ public class AreaCode {
     private static String getUsOrCanadaRegionByAreaCode(PhoneNumber phoneNumber){
         return switch (phoneNumber.getAreaCode()) {
             case "201", "551" -> "United States\nRegion: Jersey City, NJ";
-            case "202" -> "United States\nRegion: District of Columbia";
-            case "203" -> "United States\nRegion: Bridgeport, CT";
-            case "205" -> "United States\nRegion: Birmingham, AL";
+            case "202", "771" -> "United States\nRegion: District of Columbia";
+            case "203", "475" -> "United States\nRegion: Bridgeport, CT";
+            case "205", "659" -> "United States\nRegion: Birmingham, AL";
             case "206" -> "United States\nRegion: Seattle, WA";
             case "207" -> "United States\nRegion: Portland, ME";
-            case "208" -> "United States\nRegion: Idaho";
-            case "209" -> "United States\nRegion: Stockton, CA";
-            case "210" -> "United States\nRegion: San Antonio, TX";
-            case "212" -> "United States\nRegion: New York, NY";
-            case "213" -> "United States\nRegion: Los Angeles, CA";
-            case "214" -> "United States\nRegion: Dallas, TX";
-            case "215" -> "United States\nRegion: Philadelphia, PA";
+            case "208", "986" -> "United States\nRegion: Idaho";
+            case "209", "350" -> "United States\nRegion: Stockton, CA";
+            case "210", "726" -> "United States\nRegion: San Antonio, TX";
+            case "212", "332", "347", "646", "718", "917", "929" -> "United States\nRegion: New York, NY";
+            case "213", "310", "323", "424", "747", "818" -> "United States\nRegion: Los Angeles, CA";
+            case "214", "469", "945", "972" -> "United States\nRegion: Dallas, TX";
+            case "215", "267", "445" -> "United States\nRegion: Philadelphia, PA";
             case "216" -> "United States\nRegion: Cleveland, OH";
             case "217" -> "United States\nRegion: Springfield, IL";
             case "218" -> "United States\nRegion: Duluth, MN";
@@ -42,7 +42,6 @@ public class AreaCode {
             case "256" -> "United States\nRegion: Huntsville, AL";
             case "260" -> "United States\nRegion: Fort Wayne, IN";
             case "262" -> "United States\nRegion: Kenosha, WI";
-            case "267" -> "United States\nRegion: Philadelphia, PA";
             case "269" -> "United States\nRegion: Kalamazoo, MI";
             case "270" -> "United States\nRegion: Bowling Green, KY";
             case "272" -> "United States\nRegion: Scranton, PA";
@@ -57,7 +56,6 @@ public class AreaCode {
             case "307" -> "United States\nRegion: Wyoming";
             case "308" -> "United States\nRegion: Grand Island, NE";
             case "309" -> "United States\nRegion: Peoria, IL";
-            case "310" -> "United States\nRegion: Los Angeles, CA";
             case "312" -> "United States\nRegion: Chicago, IL";
             case "313" -> "United States\nRegion: Detroit, MI";
             case "314" -> "United States\nRegion: St. Louis, MO";
@@ -67,13 +65,11 @@ public class AreaCode {
             case "318" -> "United States\nRegion: Shreveport, LA";
             case "319" -> "United States\nRegion: Cedar Rapids, IA";
             case "320" -> "United States\nRegion: St. Cloud, MN";
-            case "321" -> "United States\nRegion: Orlando, FL";
-            case "323" -> "United States\nRegion: Los Angeles, CA";
+            case "321", "407", "689" -> "United States\nRegion: Orlando, FL";
             case "325" -> "United States\nRegion: Abilene, TX";
             case "326" -> "United States\nRegion: Dayton, OH";
             case "330" -> "United States\nRegion: Akron, OH";
             case "331" -> "United States\nRegion: Aurora, IL";
-            case "332" -> "United States\nRegion: New York, NY";
             case "334" -> "United States\nRegion: Montgomery, AL";
             case "336" -> "United States\nRegion: Greensboro, NC";
             case "337" -> "United States\nRegion: Lafayette, LA";
@@ -81,8 +77,6 @@ public class AreaCode {
             case "340" -> "United States\nRegion: Virgin Islands";
             case "341" -> "United States\nRegion: Oakland, CA";
             case "346" -> "United States\nRegion: Houston, TX";
-            case "347" -> "United States\nRegion: New York, NY";
-            case "350" -> "United States\nRegion: Stockton, CA";
             case "351" -> "United States\nRegion: Lowell, MA";
             case "352" -> "United States\nRegion: Gainesville, FL";
             case "360" -> "United States\nRegion: Vancouver, WA";
@@ -97,7 +91,6 @@ public class AreaCode {
             case "404" -> "United States\nRegion: Atlanta, GA";
             case "405" -> "United States\nRegion: Oklahoma City, OK";
             case "406" -> "United States\nRegion: Montana";
-            case "407" -> "United States\nRegion: Orlando, FL";
             case "408" -> "United States\nRegion: San Jose, CA";
             case "409" -> "United States\nRegion: Beaumont, TX";
             case "410" -> "United States\nRegion: Baltimore, MD";
@@ -108,7 +101,6 @@ public class AreaCode {
             case "417" -> "United States\nRegion: Springfield, MO";
             case "419" -> "United States\nRegion: Toledo, OH";
             case "423" -> "United States\nRegion: Chattanooga, TN";
-            case "424" -> "United States\nRegion: Los Angeles, CA";
             case "425" -> "United States\nRegion: Bellevue, WA";
             case "430" -> "United States\nRegion: Tyler, TX";
             case "432" -> "United States\nRegion: Midland, TX";
@@ -117,23 +109,20 @@ public class AreaCode {
             case "440" -> "United States\nRegion: Parma, OH";
             case "442" -> "United States\nRegion: Oceanside, CA";
             case "443" -> "United States\nRegion: Baltimore, MD";
-            case "445" -> "United States\nRegion: Philadelphia, PA";
             case "447" -> "United States\nRegion: Springfield, IL";
             case "448" -> "United States\nRegion: Tallahassee, FL";
             case "458" -> "United States\nRegion: Eugene, OR";
             case "463" -> "United States\nRegion: Indianapolis, IN";
             case "464" -> "United States\nRegion: Cicero, IL";
-            case "469" -> "United States\nRegion: Dallas, TX";
             case "470" -> "United States\nRegion: Atlanta, GA";
             case "472" -> "United States\nRegion: Fayetteville, NC";
-            case "475" -> "United States\nRegion: Bridgeport, CT";
             case "478" -> "United States\nRegion: Macon, GA";
             case "479" -> "United States\nRegion: Fort Smith, AR";
             case "480" -> "United States\nRegion: Mesa, AZ";
             case "484" -> "United States\nRegion: Allentown, PA";
             case "501" -> "United States\nRegion: Little Rock, AR";
             case "502" -> "United States\nRegion: Louisville, KY";
-            case "503" -> "United States\nRegion: Portland, OR";
+            case "503", "971" -> "United States\nRegion: Portland, OR";
             case "504" -> "United States\nRegion: New Orleans, LA";
             case "505" -> "United States\nRegion: Albuquerque, NM";
             case "507" -> "United States\nRegion: Rochester, MN";
@@ -196,12 +185,10 @@ public class AreaCode {
             case "636" -> "United States\nRegion: O'Fallon, MO";
             case "640" -> "United States\nRegion: Trenton, NJ";
             case "641" -> "United States\nRegion: Mason City, IA";
-            case "646" -> "United States\nRegion: New York, NY";
             case "650" -> "United States\nRegion: San Mateo, CA";
             case "651" -> "United States\nRegion: St. Paul, MN";
             case "656" -> "United States\nRegion: Tampa, FL";
             case "657" -> "United States\nRegion: Anaheim, CA";
-            case "659" -> "United States\nRegion: Birmingham, AL";
             case "660" -> "United States\nRegion: Sedalia, MO";
             case "661" -> "United States\nRegion: Bakersfield, CA";
             case "662" -> "United States\nRegion: Southaven, MS";
@@ -214,7 +201,6 @@ public class AreaCode {
             case "681" -> "United States\nRegion: West Virginia";
             case "682" -> "United States\nRegion: Fort Worth, TX";
             case "684" -> "United States\nRegion: American Samoa";
-            case "689" -> "United States\nRegion: Orlando, FL";
             case "701" -> "United States\nRegion: North Dakota";
             case "702" -> "United States\nRegion: Las Vegas, NV";
             case "703" -> "United States\nRegion: Arlington, VA";
@@ -228,12 +214,10 @@ public class AreaCode {
             case "715" -> "United States\nRegion: Eau Claire, WI";
             case "716" -> "United States\nRegion: Buffalo, NY";
             case "717" -> "United States\nRegion: Lancaster, PA";
-            case "718" -> "United States\nRegion: New York, NY";
             case "719" -> "United States\nRegion: Colorado Springs, CO";
             case "720" -> "United States\nRegion: Denver, CO";
             case "724" -> "United States\nRegion: New Castle, PA";
             case "725" -> "United States\nRegion: Las Vegas, NV";
-            case "726" -> "United States\nRegion: San Antonio, TX";
             case "727" -> "United States\nRegion: St. Petersburg, FL";
             case "731" -> "United States\nRegion: Jackson, TN";
             case "732" -> "United States\nRegion: Toms River, NJ";
@@ -241,7 +225,6 @@ public class AreaCode {
             case "737" -> "United States\nRegion: Austin, TX";
             case "740" -> "United States\nRegion: Newark, OH";
             case "743" -> "United States\nRegion: Greensboro, NC";
-            case "747" -> "United States\nRegion: Los Angeles, CA";
             case "754" -> "United States\nRegion: Fort Lauderdale, FL";
             case "757" -> "United States\nRegion: Virginia Beach, VA";
             case "760" -> "United States\nRegion: Oceanside, CA";
@@ -250,7 +233,6 @@ public class AreaCode {
             case "765" -> "United States\nRegion: Muncie, IN";
             case "769" -> "United States\nRegion: Jackson, MS";
             case "770" -> "United States\nRegion: Roswell, GA";
-            case "771" -> "United States\nRegion: District of Columbia";
             case "772" -> "United States\nRegion: Port St. Lucie, FL";
             case "773" -> "United States\nRegion: Chicago, IL";
             case "774" -> "United States\nRegion: Worcester, MA";
@@ -274,7 +256,6 @@ public class AreaCode {
             case "815" -> "United States\nRegion: Rockford, IL";
             case "816" -> "United States\nRegion: Kansas City, MO";
             case "817" -> "United States\nRegion: Fort Worth, TX";
-            case "818" -> "United States\nRegion: Los Angeles, CA";
             case "820" -> "United States\nRegion: Oxnard, CA";
             case "826" -> "United States\nRegion: Roanoke, VA";
             case "828" -> "United States\nRegion: Asheville, NC";
@@ -316,13 +297,11 @@ public class AreaCode {
             case "914" -> "United States\nRegion: Yonkers, NY";
             case "915" -> "United States\nRegion: El Paso, TX";
             case "916" -> "United States\nRegion: Sacramento, CA";
-            case "917" -> "United States\nRegion: New York, NY";
             case "918" -> "United States\nRegion: Tulsa, OK";
             case "919" -> "United States\nRegion: Raleigh, NC";
             case "920" -> "United States\nRegion: Green Bay, WI";
             case "925" -> "United States\nRegion: Concord, CA";
             case "928" -> "United States\nRegion: Yuma, AZ";
-            case "929" -> "United States\nRegion: New York, NY";
             case "930" -> "United States\nRegion: Evansville, IN";
             case "931" -> "United States\nRegion: Clarksville, TN";
             case "934" -> "United States\nRegion: Brentwood, NY";
@@ -333,7 +312,6 @@ public class AreaCode {
             case "940" -> "United States\nRegion: Denton, TX";
             case "941" -> "United States\nRegion: North Port, FL";
             case "943" -> "United States\nRegion: Atlanta, GA";
-            case "945" -> "United States\nRegion: Dallas, TX";
             case "947" -> "United States\nRegion: Troy, MI";
             case "948" -> "United States\nRegion: Virginia Beach, VA";
             case "949" -> "United States\nRegion: Irvine, CA";
@@ -343,8 +321,6 @@ public class AreaCode {
             case "956" -> "United States\nRegion: Laredo, TX";
             case "959" -> "United States\nRegion: Hartford, CT";
             case "970" -> "United States\nRegion: Fort Collins, CO";
-            case "971" -> "United States\nRegion: Portland, OR";
-            case "972" -> "United States\nRegion: Dallas, TX";
             case "973" -> "United States\nRegion: Newark, NJ";
             case "978" -> "United States\nRegion: Lowell, MA";
             case "979" -> "United States\nRegion: College Station, TX";
@@ -352,7 +328,6 @@ public class AreaCode {
             case "983" -> "United States\nRegion: Denver, CO";
             case "984" -> "United States\nRegion: Raleigh, NC";
             case "985" -> "United States\nRegion: Houma, LA";
-            case "986" -> "United States\nRegion: Idaho";
             case "989" -> "United States\nRegion: Saginaw, MI";
             case "204" -> "Canada\nRegion: Manitoba";
             case "226" -> "Canada\nRegion: London, ON";
@@ -408,71 +383,71 @@ public class AreaCode {
             case "246" -> "Barbados";
             case "809", "829", "849" -> "Dominican Republic";
             case "876" -> "Jamaica";
-            default -> throw new ThereIsNoAreaCodeException(phoneNumber.getAreaCode());
+            default -> throw new ThereIsNoAreaCodeException(phoneNumber.getAreaCode(), "the United States, Canada, Bahamas, Barbados, Dominican Republic or Jamaica");
         };
     }
 
-    private static String getBrazilianStateByAreaCode(Integer areaCode){
-        if(areaCode >= 11 && areaCode <= 19){
+    private static String getBrazilianStateByAreaCode(Integer areaCode) {
+        if (areaCode >= 11 && areaCode <= 19) {
             return "\nState: São Paulo";
-        }else if(areaCode == 21 || areaCode == 22 || areaCode == 24){
+        } else if (areaCode == 21 || areaCode == 22 || areaCode == 24) {
             return "\nState: Rio de Janeiro";
-        }else if(areaCode == 27 || areaCode == 28){
+        } else if (areaCode == 27 || areaCode == 28) {
             return "\nState: Espírito Santo";
-        }else if((areaCode >= 31 && areaCode <= 35) || areaCode == 37 || areaCode == 38){
+        } else if ((areaCode >= 31 && areaCode <= 35) || areaCode == 37 || areaCode == 38) {
             return "\nState: Minas Gerais";
-        }else if(areaCode >= 41 && areaCode <= 46){
+        } else if (areaCode >= 41 && areaCode <= 46) {
             return "\nState: Paraná";
-        }else if(areaCode >= 47 && areaCode <= 49){
+        } else if (areaCode >= 47 && areaCode <= 49) {
             return "\nState: Santa Catarina";
-        }else if(areaCode == 51 || (areaCode >= 53 && areaCode <= 55)){
+        } else if (areaCode == 51 || (areaCode >= 53 && areaCode <= 55)) {
             return "\nState: Rio Grande do Sul";
-        }else if(areaCode == 61){
+        } else if (areaCode == 61) {
             return "\nState: Distrito Federal";
-        }else if(areaCode == 62 || areaCode == 64){
+        } else if (areaCode == 62 || areaCode == 64) {
             return "\nState: Goiás";
-        }else if(areaCode == 63){
+        } else if (areaCode == 63) {
             return "\nState: Tocantins";
-        }else if(areaCode == 65 || areaCode == 66){
+        } else if (areaCode == 65 || areaCode == 66) {
             return "\nState: Mato Grosso";
-        }else if(areaCode == 67){
+        } else if (areaCode == 67) {
             return "\nState: Mato Grosso do Sul";
-        }else if(areaCode == 68){
+        } else if (areaCode == 68) {
             return "\nState: Acre";
-        }else if(areaCode == 69){
+        } else if (areaCode == 69) {
             return "\nState: Rondônia";
-        }else if(areaCode == 71 || (areaCode >= 73 && areaCode <= 75) || areaCode == 77){
+        } else if (areaCode == 71 || (areaCode >= 73 && areaCode <= 75) || areaCode == 77) {
             return "\nState: Bahia";
-        }else if(areaCode == 79){
+        } else if (areaCode == 79) {
             return "\nState: Sergipe";
-        }else if(areaCode == 81 || areaCode == 87){
+        } else if (areaCode == 81 || areaCode == 87) {
             return "\nState: Pernambuco";
-        }else if(areaCode == 82){
+        } else if (areaCode == 82) {
             return "\nState: Alagoas";
-        }else if(areaCode == 83){
+        } else if (areaCode == 83) {
             return "\nState: Paraíba";
-        }else if(areaCode == 84){
+        } else if (areaCode == 84) {
             return "\nState: Rio Grande do Norte";
-        }else if(areaCode == 85 || areaCode == 88){
+        } else if (areaCode == 85 || areaCode == 88) {
             return "\nState: Ceará";
-        }else if(areaCode == 86 || areaCode == 89){
+        } else if (areaCode == 86 || areaCode == 89) {
             return "\nState: Piauí";
-        }else if(areaCode == 91 || areaCode == 93 || areaCode == 94){
+        } else if (areaCode == 91 || areaCode == 93 || areaCode == 94) {
             return "\nState: Pará";
-        }else if(areaCode == 92 || areaCode == 97){
+        } else if (areaCode == 92 || areaCode == 97) {
             return "\nState: Amazonas";
-        }else if(areaCode == 95){
+        } else if (areaCode == 95) {
             return "\nState: Roraima";
-        }else if(areaCode == 96){
+        } else if (areaCode == 96) {
             return "\nState: Amapá";
-        }else if(areaCode == 98 || areaCode == 99){
+        } else if (areaCode == 98 || areaCode == 99) {
             return "\nState: Maranhão";
-        }else{
+        } else {
             throw new ThereIsNoAreaCodeException(areaCode, "Brazil");
         }
     }
 
-    public static String getCountryByDDI(PhoneNumber phoneNumber){
+    public static String getCountryByDDI(PhoneNumber phoneNumber) {
         return switch (phoneNumber.getDDI()) {
             case "1" -> getUsOrCanadaRegionByAreaCode(phoneNumber);
             case "20" -> "Egypt";
@@ -638,7 +613,7 @@ public class AreaCode {
             case "690" -> "Tokelau";
             case "691" -> "Federated States of Micronesia";
             case "692" -> "Marshall Islands";
-            case "7" -> "Russia or Kazakhstan";
+            case "7" -> "Russia";
             case "81" -> "Japan";
             case "82" -> "South Korea";
             case "84" -> "Vietnam";
@@ -677,6 +652,7 @@ public class AreaCode {
             case "994" -> "Azerbaijan";
             case "995" -> "Georgia";
             case "996" -> "Kyrgyzstan";
+            case "997" -> "Kazakhstan";
             case "998" -> "Uzbekistan";
             default -> throw new ThereIsNoDDIException(phoneNumber.getDDI());
         };
