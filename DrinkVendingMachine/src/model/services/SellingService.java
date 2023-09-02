@@ -19,7 +19,7 @@ public class SellingService {
         amount = 0.0;
     }
 
-    public void setCustomerChoice(Integer id) {
+    private void setCustomerChoice(Integer id) {
         if (id < 1 || id > managementService.getQuantity()) {
             orderStatus = OrderStatus.CANCELED;
             throw new ChoiceException("The chosen number is not valid.");
@@ -28,7 +28,7 @@ public class SellingService {
         orderStatus = OrderStatus.REQUESTED;
     }
 
-    public OrderStatus isTheAmountEnough(Character customerChoice) {
+    private OrderStatus isTheAmountEnough(Character customerChoice) {
         if (amount >= chosenDrink.getPrice()) {
             return OrderStatus.PAID;
         } else {
@@ -40,7 +40,7 @@ public class SellingService {
         }
     }
 
-    public void receiveCustomerMoney(Scanner sc, boolean firstTry) {
+    private void processPayment(Scanner sc, boolean firstTry) {
         Character customerChoice;
         if (firstTry) {
             customerChoice = 'y';
@@ -58,7 +58,7 @@ public class SellingService {
         orderStatus = isTheAmountEnough(customerChoice);
     }
 
-    public void processPayment() {
+    private void shipping() {
         System.out.println("\n################################################");
         System.out.println(chosenDrink + " - $" + chosenDrink.getPrice());
         System.out.println("Thanks for the preference. See you next soon. ;)");
@@ -74,12 +74,12 @@ public class SellingService {
             System.out.print("Which drink would you like to drink? ");
             Integer id = sc.nextInt();
             setCustomerChoice(id);
-            receiveCustomerMoney(sc, true);
+            processPayment(sc, true);
             while (orderStatus == OrderStatus.WAITING_PAYMENT) {
-                receiveCustomerMoney(sc, false);
+                processPayment(sc, false);
             }
             if (orderStatus == OrderStatus.PAID) {
-                processPayment();
+                shipping();
                 orderStatus = OrderStatus.DELIVERED;
             } else if (orderStatus == OrderStatus.CANCELED) {
                 throw new ChoiceException("The money isn't enough to buy that drink.");

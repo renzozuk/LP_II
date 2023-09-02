@@ -15,10 +15,6 @@ public class Exam {
     }
 
     public double calculateExamGrade(){
-        if(gradePart1 + gradePart2 > 10.0){
-            return 10.0;
-        }else{
-            return gradePart1 + gradePart2;
-        }
+        return Math.min(gradePart1 + gradePart2, 10.0);
     }
 }

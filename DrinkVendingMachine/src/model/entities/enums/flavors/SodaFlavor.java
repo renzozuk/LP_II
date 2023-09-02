@@ -5,5 +5,5 @@ public enum SodaFlavor {
     GUARANA,
     GRAPE,
     LEMON,
-    ORANGE
+    ORANGE;
 }

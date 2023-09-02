@@ -12,6 +12,10 @@ public class Soda extends Drink {
 
     @Override
     public String toString() {
-        return sodaFlavor.name().charAt(0) + sodaFlavor.name().substring(1).toLowerCase();
+        StringBuilder result = new StringBuilder(sodaFlavor.name().charAt(0) + sodaFlavor.name().substring(1).toLowerCase());
+        if(sodaFlavor != SodaFlavor.COLA){
+            result.append(" Soda");
+        }
+        return result.toString();
     }
 }

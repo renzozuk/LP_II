@@ -18,22 +18,16 @@ public class Tea extends Drink {
         this.cold = cold;
     }
 
-    public TeaFlavor getTeaFlavor() {
-        return teaFlavor;
-    }
-
     @Override
     public String toString() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if(cold){
-            result += "Iced ";
+            result.append("Iced ");
         }else{
-            result += "Hot ";
+            result.append("Hot ");
         }
-        result += getTeaFlavor().name().charAt(0);
-        result += getTeaFlavor().name().substring(1).toLowerCase() + " ";
-        result += getClass().getSimpleName();
-        return result;
+        result.append(teaFlavor.name().charAt(0)).append(teaFlavor.name().substring(1).toLowerCase()).append(" ").append(getClass().getSimpleName());
+        return result.toString();
     }
 }
 

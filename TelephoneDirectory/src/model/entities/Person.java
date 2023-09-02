@@ -1,6 +1,6 @@
 package model.entities;
 
-import model.exceptions.NotValidEmailException;
+import model.exceptions.InvalidEmailException;
 
 public class Person {
     private String name;
@@ -8,7 +8,7 @@ public class Person {
 
     public Person(String name, String email){
         if(!email.contains("@")){
-            throw new NotValidEmailException();
+            throw new InvalidEmailException();
         }
         this.name = name;
         this.email = email;

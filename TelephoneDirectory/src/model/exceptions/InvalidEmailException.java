@@ -1,9 +1,9 @@
 package model.exceptions;
 
-public class NotValidEmailException extends RuntimeException{
+public class InvalidEmailException extends RuntimeException{
     private static final long serialVersionUID = 1L;
 
-    public NotValidEmailException(){
+    public InvalidEmailException(){
         super("A valid email must have an @.");
     }
 

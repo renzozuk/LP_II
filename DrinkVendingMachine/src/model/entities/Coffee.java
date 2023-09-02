@@ -24,24 +24,19 @@ public class Coffee extends Drink {
         this.cold = cold;
     }
 
-    public CoffeeFlavor getCoffeeFlavor() {
-        return coffeeFlavor;
-    }
-
     @Override
     public String toString() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if(cold){
-            result += "Iced ";
+            result.append("Iced ");
         }else{
-            result += "Hot ";
+            result.append("Hot ");
         }
-        if(getCoffeeFlavor() == CoffeeFlavor.BLACK){
-            result += getClass().getSimpleName();
+        if(coffeeFlavor == CoffeeFlavor.BLACK){
+            result.append(getClass().getSimpleName());
         }else{
-            result += getCoffeeFlavor().name().charAt(0);
-            result += getCoffeeFlavor().name().substring(1).toLowerCase();
+            result.append(coffeeFlavor.name().charAt(0)).append(coffeeFlavor.name().substring(1).toLowerCase());
         }
-        return result;
+        return result.toString();
     }
 }

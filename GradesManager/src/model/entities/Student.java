@@ -18,8 +18,8 @@ public class Student {
     @Override
     public String toString(){
         return "Name: " +  name + "\n"
-                + "Exam 1: " + String.format("%.1f", exam1.calculateExamGrade()) + "\n"
-                + "Exam 2: " + String.format("%.1f", exam2.calculateExamGrade()) + "\n"
-                + "Average grade: " + String.format("%.1f", calculateAverage()) + "\n";
+                + "Exam 1: " + String.format("%.1f%n", exam1.calculateExamGrade())
+                + "Exam 2: " + String.format("%.1f%n", exam2.calculateExamGrade())
+                + "Average grade: " + String.format("%.1f%n", calculateAverage());
     }
 }

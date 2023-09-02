@@ -29,14 +29,13 @@ public class Classroom {
 
     @Override
     public String toString(){
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int idx = 1;
         for (Student student : students) {
-            result += "===== Student " + idx + " =====" + "\n";
-            result += student + "\n";
+            result.append("===== Student ").append(idx).append(" =====\n").append(student).append("\n");
             idx++;
         }
-        result += "Classroom average grade: " + String.format("%.1f", calculateAverage()) + "\n";
-        return result;
+        result.append("Classroom average grade: ").append(String.format("%.1f%n", calculateAverage()));
+        return result.toString();
     }
 }
