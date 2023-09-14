@@ -73,6 +73,22 @@ public class ValidateNumber {
         }
     }
 
+    private static void validateUruguayanNumber(PhoneNumber phoneNumber) {
+        StringBuilder numberToValidate = new StringBuilder();
+        if(phoneNumber.getAreaCode().length() == 0){
+            numberToValidate.append(phoneNumber.getNumber());
+        }else{
+            numberToValidate.append("(").append(phoneNumber.getAreaCode()).append(")").append(phoneNumber.getNumber());
+        }
+
+        Pattern pattern = Pattern.compile("\\([2|4]\\d{3}\\)\\d{2} ?\\d{2}|\\(?9\\d{3}\\)? ?\\d{2} ?\\d{2}");
+        Matcher matcher = pattern.matcher(numberToValidate.toString());
+
+        if (!matcher.matches()) {
+            throw new InvalidNumberException(numberToValidate.toString(), "+598(2XXX)YYYY, +598(2XXX)YY YY, +598(4XXX)YYYY, +598(4XXX)YY YY, +598(9XXX)YYYY, +598(9XXX)YY YY, +598()9YYYYYYY, +598()9YYY YYYY or +598()9YYY YYYY", "Uruguay");
+        }
+    }
+    
     public static void validate(PhoneNumber phoneNumber) {
         if (!phoneNumber.getNumber().contains("0") && !phoneNumber.getNumber().contains("1") && !phoneNumber.getNumber().contains("2") && !phoneNumber.getNumber().contains("3") && !phoneNumber.getNumber().contains("4") && !phoneNumber.getNumber().contains("5") && !phoneNumber.getNumber().contains("6") && !phoneNumber.getNumber().contains("7") && !phoneNumber.getNumber().contains("8") && !phoneNumber.getNumber().contains("9")) {
             throw new InvalidNumberException(phoneNumber.getNumber());
@@ -82,6 +98,7 @@ public class ValidateNumber {
             case "33" -> validateFrenchNumber(phoneNumber);
             case "54" -> validateArgentinianNumber(phoneNumber);
             case "55" -> validateBrazilianNumber(phoneNumber);
+            case "598" -> validateUruguayanNumber(phoneNumber);
             case "81" -> validateJapaneseNumber(phoneNumber);
         }
     }

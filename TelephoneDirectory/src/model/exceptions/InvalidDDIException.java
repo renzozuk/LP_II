@@ -1,6 +1,9 @@
 package model.exceptions;
 
+import java.io.Serial;
+
 public class InvalidDDIException extends RuntimeException{
+    @Serial
     private static final long serialVersionUID = 1L;
 
     public InvalidDDIException(){

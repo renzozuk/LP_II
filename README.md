@@ -5,6 +5,7 @@ The language used here will be Java.
 1. Drink Vending Machine
 2. Telephone Directory
 3. Grades Manager
+4. Products Manager
 
 ## Drink Vending Machine
 When the user starts the application/Program with the default code. This will appear:
@@ -40,14 +41,14 @@ Money to put in the machine:
 
 The user put $1 in the machine.
 ```
-Which drink would you like to drink? 9
+Which drink would you like to drink? 8
 Money to put in the machine: 1
 The money isn't enough to buy that drink. Would you like to put more money in the machine? (y/n):
 ```
 
 $1 is not enough to buy that drink. So, the user chose to put more money in the machine.
 ```
-Which drink would you like to drink? 9
+Which drink would you like to drink? 8
 Money to put in the machine: 1
 The money isn't enough to buy that drink. Would you like to put more money in the machine? (y/n): y
 Money to put in the machine: 2
