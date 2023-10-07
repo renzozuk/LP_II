@@ -18,7 +18,7 @@ public class Program {
 
         TelephoneDirectory second = new TelephoneDirectory("Stopstar");
         second.addToList(new PhoneNumber("+54(11)1234-5678"), new Person("Ana Rodriguez", "ana.rod@example.com"));
-        second.addToList(new PhoneNumber("+54(223)555-6789"), new Person("Juan Gonzalez", "juan.gonzalez@example.com"));
+        second.addToList(new PhoneNumber("+54(2964)55-6789"), new Person("Juan Gonzalez", "juan.gonzalez@example.com"));
         second.addToList(new PhoneNumber("+598()9522 11 46"), maria);
         second.addToList(new PhoneNumber("+598(2411)88 39"), new Person("Doris Castro", "doris.castro1@example.com"));
         //second.addToList(new PhoneNumber("+51()987-654-321"), new Person("Luis Quispe", "luis.quispe@example.com"));

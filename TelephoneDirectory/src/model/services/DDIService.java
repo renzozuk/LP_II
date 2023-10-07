@@ -128,7 +128,7 @@ public class DDIService {
             case "51" -> "Peru";
             case "52" -> "Mexico";
             case "53" -> "Cuba";
-            case "54" -> "Argentina";
+            case "54" -> "Argentina" + AreaCodeService.getArgentinianProvinceByAreaCode(phoneNumber);
             case "55" -> "Brazil" + AreaCodeService.getBrazilianTypeNumber(phoneNumber);
             case "56" -> "Chile";
             case "57" -> "Colombia";

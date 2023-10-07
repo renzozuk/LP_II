@@ -1,6 +1,5 @@
 package model.entities;
 
-import model.services.AreaCodeService;
 import model.services.DDIService;
 import model.services.ValidateNumber;
 

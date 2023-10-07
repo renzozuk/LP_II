@@ -6,6 +6,8 @@ The language used here will be Java.
 2. Telephone Directory
 3. Grades Manager
 4. Products Manager
+5. Gym Manager
+6. Mech Manager
 
 ## Drink Vending Machine
 When the user starts the application/Program with the default code. This will appear:
